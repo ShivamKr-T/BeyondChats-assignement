@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/articles")
+      .get("https://beyondchats-assignement.onrender.com/articles")
       .then((res) => setArticles(res.data));
   }, []);
 
