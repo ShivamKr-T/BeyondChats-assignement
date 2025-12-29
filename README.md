@@ -1,3 +1,8 @@
+## 🌐 Frontend Preview
+
+![Frontend Screenshot](<img width="1856" height="853" alt="image" src="https://github.com/user-attachments/assets/4498a4f3-08fd-42cb-9df5-ae80160da813" />)
+
+
 # BeyondChats – Full Stack Web Developer Intern Assignment
 
 This project is a full-stack application built as part of the BeyondChats
