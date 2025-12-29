@@ -49,36 +49,46 @@ Make sure you have the following installed:
 
 ### 2️⃣ Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/beyondchats-assignment.git
+git clone https://github.com/ShivamKr-T/beyondchats-assignment.git
 cd beyondchats-assignment
 ```
 
 ### 3️⃣ Backend Setup
+```
 cd backend
 npm install
+```
 
 Create a .env file (refer .env.example):
 MONGO_URI=mongodb://your_URI/beyondchats
 
 Start MongoDB locally, then run:
+```
 node server.js
+```
 
 Backend will run at:
 http://localhost:5000
 
 ### 4️⃣ Scrape Original Articles
+```
 node scraper/scrapeBlogs.js
+```
 
 ### 5️⃣ Run Automation Script
 Run Automation Script
 
 ### 6️⃣ Frontend Setup
+```
 cd frontend
 npm install
 npm start
+```
 
 Frontend will run at:
 http://localhost:3000
+
+---
 
 ## 🧠 Architecture & Data Flow Diagram
 ```
@@ -126,19 +136,25 @@ http://localhost:3000
 │ Updated View │
 └──────────────┘
 ```
+---
+
 ## 🤖 LLM & Search Abstraction
 
 To keep the project self-contained and easy to evaluate:
-Google Search is mocked
-LLM-based rewriting is mocked
+- Google Search is mocked
+- LLM-based rewriting is mocked
 
 These layers are abstracted and can be easily replaced with real services
 (OpenAI, Gemini, SerpAPI) by adding API keys and updating the respective modules.
 
+---
+
 ## 🌐 Live Demo Link
 https://<frontend-deployment-link>
 
+---
+
 ## 👨‍💻 Author
 
-Shivam Kumar
+**Shivam Kumar**  
 Full Stack Developer | Backend & Systems Enthusiast
