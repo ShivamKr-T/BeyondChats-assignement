@@ -1,36 +1,16 @@
-// Mock LLM for article rewriting
-// This simulates how an LLM would enhance content
-
-async function rewrite(originalContent, ref1Content, ref2Content) {
+async function rewrite(originalContent, ref1, ref2) {
   return `
 # Updated Article (AI-Enhanced Version)
 
 ## Introduction
-${originalContent?.slice(0, 300) || "This article has been enhanced using AI-based analysis."}
+This article has been enhanced using AI-based rewriting.
 
----
-
-## Enhanced Content
-This article has been rewritten by analyzing the structure, tone, and formatting
-of top-ranking articles on Google. The content has been improved to be:
-- More structured
-- SEO friendly
-- Easier to read
-- Inspired by authoritative sources
-
----
-
-## Key Improvements
-- Clear headings and sections
-- Improved flow and readability
-- Better presentation of ideas
-- Reference-based enhancement
-
----
+## Improved Content
+${originalContent.slice(0, 500)}
 
 ## References
-1. Reference Article 1
-2. Reference Article 2
+- Reference Article 1
+- Reference Article 2
 `;
 }
 

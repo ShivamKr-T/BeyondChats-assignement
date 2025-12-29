@@ -7,44 +7,42 @@ const rewrite = require("./rewriteArticle");
 
 (async () => {
   try {
-    // 1. Fetch original articles
     const res = await axios.get("http://localhost:5000/articles");
     const articles = res.data.filter(a => !a.isUpdated);
 
     console.log("Articles to update:", articles.length);
 
-    for (let article of articles) {
+    for (const article of articles) {
       console.log("Updating:", article.title);
 
-      // 2. Mock Google search
       const links = await searchGoogle(article.title);
 
-      // 3. Scrape reference content
       const ref1 = await scrapeContent(links[0]);
       const ref2 = await scrapeContent(links[1]);
 
-      // 4. Rewrite using Mock LLM
-      const updatedContent = await rewrite(
-        article.content,
+      // 🔥 IMPORTANT: capture return value
+      const updatedText = await rewrite(
+        article.originalContent,
         ref1,
         ref2
       );
 
-      // 5. UPDATE existing article (IMPORTANT)
+      console.log("Updated content length:", updatedText.length);
+
+      // 🔥 IMPORTANT: write to updatedContent
       await axios.put(
         `http://localhost:5000/articles/${article._id}`,
         {
-            updatedContent: updatedContent,
-            isUpdated: true,
-            references: links
+          updatedContent: updatedText,
+          isUpdated: true,
+          references: links
         }
       );
 
-
-      console.log("Updated successfully:", article.title);
+      console.log("Saved updated version for:", article.title);
     }
 
-    console.log("Automation finished");
+    console.log("Automation finished successfully");
   } catch (err) {
     console.error("Automation error:", err.message);
   }
