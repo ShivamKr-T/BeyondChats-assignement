@@ -13,7 +13,7 @@ It demonstrates:
 ---
 
 ## 📁 Project Structure
-
+```
 beyondchats-assignment/
 ├── backend/
 │ ├── server.js
@@ -28,7 +28,7 @@ beyondchats-assignment/
 │ ├── public/
 │ └── package.json
 └── README.md
-
+```
 
 ---
 
@@ -76,6 +76,7 @@ Frontend will run at:
 http://localhost:3000
 
 ## 🧠 Architecture & Data Flow Diagram
+```
 ┌────────────┐
 │ BeyondChats│
 │   Blogs    │
@@ -119,7 +120,7 @@ http://localhost:3000
 │ Original vs  │
 │ Updated View │
 └──────────────┘
-
+```
 ## 🤖 LLM & Search Abstraction
 
 To keep the project self-contained and easy to evaluate:
