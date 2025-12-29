@@ -1,6 +1,6 @@
 ## 🌐 Frontend Preview
 
-![Frontend Screenshot](<img width="1856" height="853" alt="image" src="https://github.com/user-attachments/assets/4498a4f3-08fd-42cb-9df5-ae80160da813" />)
+![Frontend Screenshot](https://github.com/user-attachments/assets/4498a4f3-08fd-42cb-9df5-ae80160da813)
 
 
 # BeyondChats – Full Stack Web Developer Intern Assignment
@@ -137,3 +137,8 @@ These layers are abstracted and can be easily replaced with real services
 
 ## 🌐 Live Demo Link
 https://<frontend-deployment-link>
+
+## 👨‍💻 Author
+
+Shivam Kumar
+Full Stack Developer | Backend & Systems Enthusiast
