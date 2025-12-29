@@ -34,11 +34,12 @@ const rewrite = require("./rewriteArticle");
       await axios.put(
         `http://localhost:5000/articles/${article._id}`,
         {
-          content: updatedContent,
-          isUpdated: true,
-          references: links
+            updatedContent: updatedContent,
+            isUpdated: true,
+            references: links
         }
       );
+
 
       console.log("Updated successfully:", article.title);
     }

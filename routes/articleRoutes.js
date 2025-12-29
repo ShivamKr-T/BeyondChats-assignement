@@ -20,13 +20,18 @@ router.post("/", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-  const article = await Article.findByIdAndUpdate(
-    req.params.id,
-    req.body,
-    { new: true }
-  );
-  res.json(article);
+  try {
+    const article = await Article.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.json(article);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
+
 
 router.delete("/:id", async (req, res) => {
   await Article.findByIdAndDelete(req.params.id);

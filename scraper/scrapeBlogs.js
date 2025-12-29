@@ -47,11 +47,13 @@ async function scrapeBlogs() {
 
       if (title) {
         articles.push({
-          title,
-          content,
-          sourceUrl: link,
-          isUpdated: false
+            title,
+            originalContent: content,
+            updatedContent: "",
+            sourceUrl: link,
+            isUpdated: false
         });
+
       }
     } catch (err) {
       console.error("Failed to scrape:", link);
