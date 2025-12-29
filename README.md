@@ -148,7 +148,12 @@ These layers are abstracted and can be easily replaced with real services
 ---
 
 ## 🌐 Live Demo Link
-https://<frontend-deployment-link>
+
+**Frontend**
+https://beyond-chats-assignement-ehxbgdeqg-shivamkr-ts-projects.vercel.app/
+
+**Backend**
+https://beyondchats-assignement.onrender.com/articles
 
 ---
 
